@@ -49,7 +49,7 @@ The script starts from a live osu! process, resolves current JIT method addresse
 
 ## What this does
 
-`run3_autoupdate.sh` attaches Frida to a running osu! lazer process and patches the live `BeatmapDifficulty` object used during beatmap preprocessing.
+`script.sh` attaches Frida to a running osu! lazer process and patches the live `BeatmapDifficulty` object used during beatmap preprocessing.
 
 It can force:
 
@@ -266,15 +266,15 @@ cd ~/Downloads/fridalazer
 Copy the file:
 
 ```bash
-cp /path/to/run3_autoupdate.sh ./run3_autoupdate.sh
-chmod +x ./run3_autoupdate.sh
+cp /path/to/script.sh ./script.sh
+chmod +x ./script.sh
 ```
 
 Recommended directory:
 
 ```text
 ~/Downloads/fridalazer/
-├── run3_autoupdate.sh
+├── script.sh
 └── force-difficulty-autoupdate.generated.js   # generated at runtime
 ```
 
@@ -313,7 +313,7 @@ In another terminal:
 
 ```bash
 cd ~/Downloads/fridalazer
-./run3_autoupdate.sh
+./script.sh
 ```
 
 Expected startup flow:
@@ -607,7 +607,7 @@ Useful when switching maps or debugging.
 
 ### Script variables
 
-Set these before running `run3_autoupdate.sh`.
+Set these before running `script.sh`.
 
 #### `OUT_JS`
 
@@ -622,7 +622,7 @@ force-difficulty-autoupdate.generated.js
 Example:
 
 ```bash
-OUT_JS=/tmp/osu-agent.js ./run3_autoupdate.sh
+OUT_JS=/tmp/osu-agent.js ./script.sh
 ```
 
 #### `WAIT_SECONDS`
@@ -638,7 +638,7 @@ Default:
 Example:
 
 ```bash
-WAIT_SECONDS=60 ./run3_autoupdate.sh
+WAIT_SECONDS=60 ./script.sh
 ```
 
 #### `OSU_FORCE_OD`
@@ -646,7 +646,7 @@ WAIT_SECONDS=60 ./run3_autoupdate.sh
 Default target OD.
 
 ```bash
-OSU_FORCE_OD=8 ./run3_autoupdate.sh
+OSU_FORCE_OD=8 ./script.sh
 ```
 
 #### `OSU_FORCE_HP`
@@ -654,7 +654,7 @@ OSU_FORCE_OD=8 ./run3_autoupdate.sh
 Default target HP.
 
 ```bash
-OSU_FORCE_HP=5 ./run3_autoupdate.sh
+OSU_FORCE_HP=5 ./script.sh
 ```
 
 #### `OSU_FORCE_AR`
@@ -662,7 +662,7 @@ OSU_FORCE_HP=5 ./run3_autoupdate.sh
 Default target AR.
 
 ```bash
-OSU_FORCE_AR=9.5 ./run3_autoupdate.sh
+OSU_FORCE_AR=9.5 ./script.sh
 ```
 
 #### `OSU_FORCE_CS`
@@ -670,7 +670,7 @@ OSU_FORCE_AR=9.5 ./run3_autoupdate.sh
 Default target CS.
 
 ```bash
-OSU_FORCE_CS=4 ./run3_autoupdate.sh
+OSU_FORCE_CS=4 ./script.sh
 ```
 
 Full example:
@@ -681,7 +681,7 @@ OSU_FORCE_HP=5 \
 OSU_FORCE_AR=9.5 \
 OSU_FORCE_CS=4 \
 WAIT_SECONDS=60 \
-./run3_autoupdate.sh
+./script.sh
 ```
 
 ---
@@ -1151,7 +1151,7 @@ Recommended GitHub repository layout:
 ```text
 osu-difficulty-frida-agent/
 ├── README.md
-├── run3_autoupdate.sh
+├── script.sh
 ├── .gitignore
 └── docs/
     ├── troubleshooting.md
@@ -1331,7 +1331,7 @@ Terminal 2:
 
 ```bash
 cd ~/Downloads/fridalazer
-./run3_autoupdate.sh
+./script.sh
 ```
 
 Frida prompt:
