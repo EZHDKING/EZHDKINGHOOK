@@ -1,5 +1,12 @@
 # EZHDKINGHOOK
 
+[![Watch the showcase](https://img.youtube.com/vi/YJizq8c0m5w/maxresdefault.jpg)](https://www.youtube.com/watch?v=YJizq8c0m5w)
+
+DISCORD FOR SUPPORT:
+https://discord.gg/YcjNabYgTW
+
+
+
 A no-LLDB Frida launcher for locally testing osu! lazer difficulty values on Linux.
 
 > **Platform status:** this project has **only been tested on Ubuntu 24.04 x86_64 with the osu! lazer AppImage**. Other platforms are not currently supported by this launcher, although ports may be possible.
